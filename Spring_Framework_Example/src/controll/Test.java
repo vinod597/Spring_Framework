@@ -21,7 +21,7 @@ public class Test {
 	    EmployeeDao dao=(EmployeeDao)ctx.getBean("edao");
 	    // for insertion
 	      
-	    /*System.out.println("Enter the No. Of Employees to insert");
+	    System.out.println("Enter the No. Of Employees to insert");
 	    int no_ofRecords=scanner.nextInt();
 	    for(int i=1;i<=no_ofRecords;i++)
 	    {
@@ -35,7 +35,7 @@ public class Test {
 	    empbean.setSalary(scanner.nextFloat());
 	    int status=dao.saveEmployee(empbean); 
 	    System.out.println(status + " inserted");  
-	    }*/
+	    }
 	    
 	    // for update
 	   /* System.out.println("Enter the No. Of Employees to Update");
@@ -91,12 +91,12 @@ public class Test {
 	    
 	    // ResultSet Example
 	    
-	    EmployeeResult rdao=(EmployeeResult)ctx.getBean("edao2");  
+	    /*EmployeeResult rdao=(EmployeeResult)ctx.getBean("edao2");  
 	    List<EmployeeBean> list=rdao.getAllEmployees();  
 	          
 	    for(EmployeeBean e:list)  
 	        System.out.println(e.getId()+ "\t "+e.getName()+ "\t "+e.getSalary());  
-	    
+	    */
 	}
 
 }

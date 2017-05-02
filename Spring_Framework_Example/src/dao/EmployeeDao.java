@@ -5,8 +5,8 @@ public class EmployeeDao
 {
 	private JdbcTemplate jdbcTemplate;  
 	  
-	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {  
-	    this.jdbcTemplate = jdbcTemplate;  
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate1) {  
+	    this.jdbcTemplate = jdbcTemplate1;  
 	}  
 	  
 	public int saveEmployee(EmployeeBean e){  

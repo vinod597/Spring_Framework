@@ -9,5 +9,6 @@ public interface DaoImpl {
 	public abstract Boolean updateDao(Employee emp);
 	public abstract Boolean deleteDao(Employee emp);
 	public abstract List<Employee> searchDao(Employee emp);
+	public abstract List<String> searchDao1(String id);
 
 }

@@ -27,7 +27,7 @@ public class HomeController {
 		modelandview.setViewName("Home");
 		serviceImpl.inserData(emp);
 		String str=emp.getEmployeeId()+" "+emp.getEmployeeName()+" employee is inserted";
-		System.out.println(str);
+		
 		modelandview.addObject("display", str);
 				return modelandview;
 	}

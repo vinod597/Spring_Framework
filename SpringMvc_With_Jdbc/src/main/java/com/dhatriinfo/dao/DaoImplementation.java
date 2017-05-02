@@ -95,5 +95,22 @@ private JdbcTemplate jdbcTemplate;
 		    });   
 	}
 	
+	//Search Method for Jquery with Ajax
+	public List<String> searchDao1(String id) {
+		return jdbcTemplate.query("select employeeId from employee where employeeId like'"+id+"%'",new ResultSetExtractor<List<String>>(){  
+		    public List<String> extractData(ResultSet rs) throws SQLException,  
+		            DataAccessException {  
+		      
+		        List<String> list=new ArrayList<String>();  
+		        while(rs.next()){  
+		      
+		       String str=(rs.getString(1));  
+		        
+		        list.add(str);  
+		        }  
+		        return list;  
+		        }  
+		    });   
+	}
 
 }

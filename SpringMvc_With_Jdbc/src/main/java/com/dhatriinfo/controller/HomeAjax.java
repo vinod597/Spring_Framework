@@ -28,9 +28,9 @@ public class HomeAjax {
 
 	@RequestMapping(value = "/getZips", method = RequestMethod.GET)
 	public @ResponseBody
-	void getTags(@RequestParam("term") Employee emplopyeeId,HttpServletRequest request,HttpServletResponse response) throws IOException {
+	void getTags(@RequestParam("term") String emplopyeeId,HttpServletRequest request,HttpServletResponse response) throws IOException {
 		log.info("getTags() started");
-		List<Employee> listString=serviceImpl.searchData(emplopyeeId);
+		List<String> listString=serviceImpl.searchDao1(emplopyeeId);
 			String result = new Gson().toJson(listString);
 			
 			 response.getWriter().write(result);
@@ -39,17 +39,17 @@ public class HomeAjax {
 	
 	@RequestMapping(value = "/getData", method = RequestMethod.GET)
 	public @ResponseBody
-	void getZipData(@RequestParam("term") Employee emplopyeeId,HttpServletRequest request,HttpServletResponse response) throws IOException {
+	void getZipData(@RequestParam("term") String emplopyeeId,HttpServletRequest request,HttpServletResponse response) throws IOException {
 		log.info("getData() started");
 		JsonResponse jsonResponse=new JsonResponse();
 		Employee empBean=new Employee();
 		//search
-		List<Employee> listZipBean=serviceImpl.searchData(emplopyeeId);
-		Iterator<Employee> iterator=listZipBean.iterator();
+		List<String> listZipBean=serviceImpl.searchDao1(emplopyeeId);
+		Iterator<String> iterator=listZipBean.iterator();
 		while(iterator.hasNext())
 		{
 			jsonResponse.setStatus("SUCCESS");
-			empBean=(Employee)iterator.next();
+		//	empBean=(Employee)iterator.next();
 			jsonResponse.setResultObject(empBean);
 		}
 			

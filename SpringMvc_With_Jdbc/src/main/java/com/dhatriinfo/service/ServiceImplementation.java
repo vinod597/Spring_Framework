@@ -34,4 +34,9 @@ public class ServiceImplementation implements ServiceImpl{
 		return dao.searchDao(emp);
 	}
 
+	public List<String> searchDao1(String id) {
+		// TODO Auto-generated method stub
+		return dao.searchDao1(id);
+	}
+
 }
